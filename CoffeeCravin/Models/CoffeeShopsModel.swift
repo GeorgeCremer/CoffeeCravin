@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct CoffeeShopsModel: Codable {
     let name: String
     let address: String
@@ -15,5 +14,3 @@ struct CoffeeShopsModel: Codable {
     let lng: Double
     let distance: Int
 }
-
-

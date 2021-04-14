@@ -20,6 +20,11 @@
 		5E5B938626248A8F00DA8943 /* CoffeeShopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B938526248A8F00DA8943 /* CoffeeShopsModel.swift */; };
 		5E5B938F2624B47F00DA8943 /* FourSquareAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B938E2624B47F00DA8943 /* FourSquareAPIModel.swift */; };
 		5E5B93942624B7C800DA8943 /* CCErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93932624B7C800DA8943 /* CCErrors.swift */; };
+		5E5FC9F926273E3000D71849 /* CCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FC9F826273E3000D71849 /* CCMapView.swift */; };
+		5E5FCA012627481500D71849 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA002627481500D71849 /* Images.swift */; };
+		5E5FCA0726274C9F00D71849 /* CCMapAnnotationCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */; };
+		5E5FCA2D2627684500D71849 /* DistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA2C2627684500D71849 /* DistanceFormatter.swift */; };
+		5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA32262768C400D71849 /* Double+Ext.swift */; };
 		5E8D28912624C9A50047598A /* KeysForDemoUnsafe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +65,11 @@
 		5E5B938526248A8F00DA8943 /* CoffeeShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsModel.swift; sourceTree = "<group>"; };
 		5E5B938E2624B47F00DA8943 /* FourSquareAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIModel.swift; sourceTree = "<group>"; };
 		5E5B93932624B7C800DA8943 /* CCErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCErrors.swift; sourceTree = "<group>"; };
+		5E5FC9F826273E3000D71849 /* CCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapView.swift; sourceTree = "<group>"; };
+		5E5FCA002627481500D71849 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapAnnotationCoffeeView.swift; sourceTree = "<group>"; };
+		5E5FCA2C2627684500D71849 /* DistanceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceFormatter.swift; sourceTree = "<group>"; };
+		5E5FCA32262768C400D71849 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeysForDemoUnsafe.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,11 +121,12 @@
 		5E5B932D2624640B00DA8943 /* CoffeeCravin */ = {
 			isa = PBXGroup;
 			children = (
+				5E5FCA31262768AB00D71849 /* Extensions */,
 				5E8D288F2624C9550047598A /* Utilities */,
 				5E5B93932624B7C800DA8943 /* CCErrors.swift */,
+				5E5B936D262466F300DA8943 /* Managers */,
 				5E5B938426248A7100DA8943 /* Models */,
 				5E5B936E2624671900DA8943 /* UI */,
-				5E5B936D262466F300DA8943 /* Managers */,
 				5E5B932E2624640B00DA8943 /* AppDelegate.swift */,
 				5E5B93302624640B00DA8943 /* SceneDelegate.swift */,
 				5E5B93642624650500DA8943 /* Controllers */,
@@ -164,6 +175,7 @@
 		5E5B936E2624671900DA8943 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5E5FC9F726273E0C00D71849 /* MapView */,
 				5E5B93772624677000DA8943 /* Buttons */,
 			);
 			path = UI;
@@ -186,10 +198,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5E5FC9F726273E0C00D71849 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				5E5FC9F826273E3000D71849 /* CCMapView.swift */,
+				5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		5E5FCA31262768AB00D71849 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5E5FCA32262768C400D71849 /* Double+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5E8D288F2624C9550047598A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */,
+				5E5FCA002627481500D71849 /* Images.swift */,
+				5E5FCA2C2627684500D71849 /* DistanceFormatter.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -327,10 +358,15 @@
 			files = (
 				5E5B93702624676B00DA8943 /* CCGetCoffeeButton.swift in Sources */,
 				5E5B938626248A8F00DA8943 /* CoffeeShopsModel.swift in Sources */,
+				5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */,
 				5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */,
+				5E5FCA0726274C9F00D71849 /* CCMapAnnotationCoffeeView.swift in Sources */,
 				5E5B9380262474A100DA8943 /* NetworkManager.swift in Sources */,
+				5E5FC9F926273E3000D71849 /* CCMapView.swift in Sources */,
 				5E5B93942624B7C800DA8943 /* CCErrors.swift in Sources */,
 				5E5B938F2624B47F00DA8943 /* FourSquareAPIModel.swift in Sources */,
+				5E5FCA012627481500D71849 /* Images.swift in Sources */,
+				5E5FCA2D2627684500D71849 /* DistanceFormatter.swift in Sources */,
 				5E5B9369262465EB00DA8943 /* MapViewController.swift in Sources */,
 				5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */,
 			);

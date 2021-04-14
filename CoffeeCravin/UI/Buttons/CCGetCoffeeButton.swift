@@ -15,7 +15,6 @@ class CCGetCoffeeButton: UIButton {
 
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
-        // This would handle init via storyboard, which we aren't using.
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -25,7 +24,7 @@ class CCGetCoffeeButton: UIButton {
     }
 
     private func configure() {
-        setImage(UIImage(named: "CoffeeButtonIcon"), for: .normal)
+        setImage(Images.coffeeButtonIcon, for: .normal)
         layer.backgroundColor = UIColor.systemPink.cgColor
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false

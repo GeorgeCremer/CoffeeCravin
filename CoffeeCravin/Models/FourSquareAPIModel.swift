@@ -21,7 +21,7 @@ struct FourSquareVenue: Codable {
 }
 
 struct FourSquareVenueLocation: Codable {
-    var address: String?
+    var formattedAddress: [String?]?
     var lat: Double?
     var lng: Double?
     var distance: Int?

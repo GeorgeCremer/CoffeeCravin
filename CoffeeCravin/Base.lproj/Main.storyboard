@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NUV-2b-HNu">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NUV-2b-HNu" customClass="CCMapView" customModule="CoffeeCravin" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </mapView>
                         </subviews>
@@ -30,7 +30,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="NUV-2b-HNu" id="IQ8-QL-jhJ"/>
+                        <outlet property="mapView" destination="NUV-2b-HNu" id="5Df-6O-fVQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IiG-Zu-KSC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

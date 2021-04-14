@@ -7,45 +7,42 @@
 
 import Foundation
 
-
-
 class NetworkManager {
     private enum FourSquareAPIKeys: String {
         case clientID
         case clientSecret
     }
-    
+
     static let shared = NetworkManager()
-    let baseURL = "https://api.foursquare.com/v2/"
+    private let baseURL = "https://api.foursquare.com/v2/"
 
     private init() {}
 
-    func getNearbyCoffeeLocations(completed: @escaping(Result<[CoffeeShopsModel],CCErrors>) -> Void) {
-      
-        let searchType = "venues/search"
+    func getNearbyCoffeeLocations(latitude: Double, longitude: Double, completed: @escaping (Result<[CoffeeShopsModel], CCErrors>) -> Void) {
         guard let clientID = retrieveFourSquareAPIKeys(for: .clientID) else {
             completed(.failure(.unableToRetrieveFourSquareAPIKeys))
             return
         }
-        
+
         guard let clientSecret = retrieveFourSquareAPIKeys(for: .clientSecret) else {
             completed(.failure(.unableToRetrieveFourSquareAPIKeys))
             return
-            
         }
-        
-        let coordinates = "&ll=40.74224,-73.99386"
-        let query = "&%20query=coffee%20%20"
-        let fourSquareAPIVersionDate = "&v=20210401"
 
-        let endpoint = baseURL + searchType + clientID + clientSecret + coordinates + query + fourSquareAPIVersionDate
+        let searchType = "venues/search"
+        let coordinates = "&ll=\(latitude),\(longitude)"
+        let query = "&query=coffee"
+        let categoryIDCoffeeShop = "&categoryId=4bf58dd8d48988d1e0931735"
+        let versionDate = "&v=20210401"
+
+        let endpoint = baseURL + searchType + clientID + clientSecret + coordinates + query + categoryIDCoffeeShop + versionDate
 
         guard let url = URL(string: endpoint) else {
             completed(.failure(.unableToCompleteNetworkRequestURLError))
             return
         }
 
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
 
             if let _ = error {
                 completed(.failure(.unableToCompleteNetworkRequest))
@@ -63,43 +60,46 @@ class NetworkManager {
 
             do {
                 let json = try JSONDecoder().decode(FourSquareData.self, from: data)
+                print(json)
                 let dataArray = json.response.venues
                 var coffeeShops: [CoffeeShopsModel] = []
-                
-                for item in dataArray {
-                    let address = item.location.address             ?? "Street address not found - see map location"
-                    guard let name = item.name                      else {return}
-                    guard let lat = item.location.lat               else {return}
-                    guard let lng = item.location.lng               else {return}
-                    guard let distance = item.location.distance     else {return}
+
+                for result in dataArray {
+                    let address = self.formatAddress(for: result.location.formattedAddress)
+                    guard let name = result.name else { return }
+                    guard let lat = result.location.lat else { return }
+                    guard let lng = result.location.lng else { return }
+                    guard let distance = result.location.distance else { return }
 
                     let coffeeShop = CoffeeShopsModel(name: name, address: address, lat: lat, lng: lng, distance: distance)
                     coffeeShops.append(coffeeShop)
                     print(coffeeShop)
                 }
-                
                 completed(.success(coffeeShops))
-
             } catch {
                 completed(.failure(.invalidData))
-                print("JSON error: \(error)")
             }
         }
-
         // Start Network Call
         task.resume()
     }
-    
+
+    private func formatAddress(for addressFormatted: [String?]?) -> String {
+        let emptyText = "Street address not found\nSee map location."
+        guard let address = addressFormatted else { return emptyText }
+        let filtered = address.compactMap { $0 }
+        return filtered.isEmpty ? emptyText : filtered.joined(separator: "\n")
+    }
 
     private func retrieveFourSquareAPIKeys(for api: FourSquareAPIKeys) -> String? {
         let key: String = api.rawValue
-   
+
         if let infoPlistPath = Bundle.main.path(forResource: "KeysForDemoUnsafe", ofType: "plist"),
-           let dict = NSDictionary(contentsOfFile: infoPlistPath) as? [String: String] {
+           let dict = NSDictionary(contentsOfFile: infoPlistPath) as? [String: String]
+        {
             if let value = dict[key] {
                 return value
             }
-           
         }
         return nil
     }
