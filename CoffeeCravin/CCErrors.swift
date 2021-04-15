@@ -14,4 +14,5 @@ enum CCErrors: String, Error {
     case invalidData = "The data received form the server was invalid. Please try again."
     case unableToRetrieveFourSquareAPIKeys = "Unable to retrieve API Keys"
     case couldntRetrieveCurrentLocation = "Unable to find your current location"
+    case noCoffeeShopsNearby = "Sorry we couldn't find any coffee shops nearby, try a wider search?"
 }

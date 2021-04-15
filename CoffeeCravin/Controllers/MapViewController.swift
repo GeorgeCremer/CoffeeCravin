@@ -15,11 +15,29 @@ class MapViewController: UIViewController {
     var locationManager: CLLocationManager!
     var currentLocation: CLLocationCoordinate2D?
 
+    var mapViewPresenter: MapViewPresenterProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        if mapViewPresenter == nil {
+            mapViewPresenter = MapViewPresenter(coffeeLocationNetworkManager: CoffeeLocationNetworkManager(), delegate: self)
+        }
+
         configMapView()
         configLocationManager()
         configureCoffeeSearchButton()
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(willTerminateNotification), name: UIApplication.willTerminateNotification, object: nil)
+    }
+
+    @objc func appMovedToBackground() {
+        print("App moved to background!")
+    }
+
+    @objc func willTerminateNotification() {
+        print("App moved to background!")
     }
 
     func configLocationManager() {
@@ -31,6 +49,7 @@ class MapViewController: UIViewController {
 
     func configMapView() {
         mapView.delegate = self
+        mapView.register(CCMapAnnotationCoffeeView.self, forAnnotationViewWithReuseIdentifier: "coffeePin")
     }
 
     func configureCoffeeSearchButton() {
@@ -51,17 +70,7 @@ class MapViewController: UIViewController {
     @objc func coffeeSearchButtonTapped() {
         print("coffeeSearchButtonTapped")
         let centreCoordinates = mapView.centerCoordinate
-
-        NetworkManager.shared.getNearbyCoffeeLocations(latitude: centreCoordinates.latitude, longitude: centreCoordinates.longitude) { [self] result in
-            switch result {
-            case let .success(result):
-                mapView.addCoffeeLocations(coffeeShops: result)
-
-            case let .failure(error):
-                // TODO:
-                print(error)
-            }
-        }
+        mapViewPresenter?.findCoffeeShops(latitude: centreCoordinates.latitude, longitude: centreCoordinates.longitude)
     }
 }
 
@@ -71,4 +80,15 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 
     func locationManager(_: CLLocationManager, didFailWithError _: Error) {}
+}
+
+extension MapViewController: MapViewDelegate {
+    func successfullyRetrievedCoffeeShops(coffeeShops: [CoffeeShopsModel]) {
+        print("successfullyRetrievedCoffeeShops MapViewDelegate: \(coffeeShops)")
+        mapView.addCoffeeLocations(coffeeShops: coffeeShops)
+    }
+
+    func errorHandler(error: CCErrors) {
+        print("errorHandler MapViewDelegate: \(error.rawValue)")
+    }
 }

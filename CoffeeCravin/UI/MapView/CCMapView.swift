@@ -11,7 +11,6 @@ import UIKit
 class CCMapView: MKMapView {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        register(CCMapAnnotationCoffeeView.self, forAnnotationViewWithReuseIdentifier: "coffeePin")
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -25,9 +24,11 @@ class CCMapView: MKMapView {
             let latitude = $0.lat
             let longitude = $0.lng
             let annotation = MKPointAnnotation()
+            let distance = DistanceFormatter().convert(distance: .init(value: Double($0.distance), unit: .meters))
+
             annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             annotation.title = $0.name
-            annotation.subtitle = "\($0.address)\n\($0.distance) DISTANCE)"
+            annotation.subtitle = "\($0.address)\n\(distance)"
             annotations.append(annotation)
         }
 
@@ -37,13 +38,11 @@ class CCMapView: MKMapView {
         }
     }
 
-    private func removeAnnotations() {
+    func removeAnnotations() {
         DispatchQueue.main.async { [self] in
             removeAnnotations(annotations)
         }
     }
-
-    func mapView(_: MKMapView, annotationView _: MKAnnotationView, calloutAccessoryControlTapped _: UIControl) {}
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -51,38 +50,23 @@ extension MapViewController: MKMapViewDelegate {
         let identifier = "coffeePin"
 
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CCMapAnnotationCoffeeView
+
         if annotationView == nil {
-            annotationView = CCMapAnnotationCoffeeView(annotation: annotation, reuseIdentifier: "coffeePin")
+            annotationView = CCMapAnnotationCoffeeView(annotation: annotation, reuseIdentifier: identifier)
         }
-        annotationView!.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapAnnotation)))
+        
         annotationView!.canShowCallout = true
         annotationView!.calloutOffset = CGPoint(x: -5, y: 5)
         annotationView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
 
-        let label1 = UILabel()
+        let subtitleLabel = UILabel()
         let subtitle = annotation.subtitle as? String
-        label1.text = subtitle
-        label1.numberOfLines = 0
-        annotationView!.detailCalloutAccessoryView = label1
+        subtitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
+        subtitleLabel.text = subtitle
+        subtitleLabel.numberOfLines = 0
+
+        annotationView!.detailCalloutAccessoryView = subtitleLabel
 
         return annotationView
-    }
-
-    @objc func didTapAnnotation() {
-        print("didTapAnnotation")
-    }
-
-    func mapView(_: MKMapView, didDeselect view: MKAnnotationView) {
-        if let annotationTitle = view.annotation?.title {
-            print("User tapped on annotation with title: \(annotationTitle!)")
-        }
-    }
-
-    func mapView(_: MKMapView, annotationView _: MKAnnotationView, calloutAccessoryControlTapped _: UIControl) {
-        print("calloutAccessoryControlTapped")
-    }
-
-    func mapView(_: MKMapView, didSelect _: MKAnnotationView) {
-        print("didSelectAnnotationTapped")
     }
 }

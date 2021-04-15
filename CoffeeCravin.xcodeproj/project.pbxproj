@@ -7,36 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E525C3B2628CB3D000601B4 /* DistanceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */; };
 		5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B932E2624640B00DA8943 /* AppDelegate.swift */; };
 		5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93302624640B00DA8943 /* SceneDelegate.swift */; };
 		5E5B93362624640B00DA8943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B93342624640B00DA8943 /* Main.storyboard */; };
 		5E5B93382624640E00DA8943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B93372624640E00DA8943 /* Assets.xcassets */; };
 		5E5B933B2624640E00DA8943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B93392624640E00DA8943 /* LaunchScreen.storyboard */; };
-		5E5B93462624640F00DA8943 /* CoffeeCravinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93452624640F00DA8943 /* CoffeeCravinTests.swift */; };
-		5E5B93512624640F00DA8943 /* CoffeeCravinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93502624640F00DA8943 /* CoffeeCravinUITests.swift */; };
 		5E5B9369262465EB00DA8943 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B9368262465EB00DA8943 /* MapViewController.swift */; };
 		5E5B93702624676B00DA8943 /* CCGetCoffeeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B936F2624676B00DA8943 /* CCGetCoffeeButton.swift */; };
-		5E5B9380262474A100DA8943 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B937F262474A100DA8943 /* NetworkManager.swift */; };
 		5E5B938626248A8F00DA8943 /* CoffeeShopsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B938526248A8F00DA8943 /* CoffeeShopsModel.swift */; };
 		5E5B938F2624B47F00DA8943 /* FourSquareAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B938E2624B47F00DA8943 /* FourSquareAPIModel.swift */; };
 		5E5B93942624B7C800DA8943 /* CCErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93932624B7C800DA8943 /* CCErrors.swift */; };
 		5E5FC9F926273E3000D71849 /* CCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FC9F826273E3000D71849 /* CCMapView.swift */; };
 		5E5FCA012627481500D71849 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA002627481500D71849 /* Images.swift */; };
 		5E5FCA0726274C9F00D71849 /* CCMapAnnotationCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */; };
-		5E5FCA2D2627684500D71849 /* DistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA2C2627684500D71849 /* DistanceFormatter.swift */; };
 		5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA32262768C400D71849 /* Double+Ext.swift */; };
 		5E8D28912624C9A50047598A /* KeysForDemoUnsafe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */; };
+		5EB3C15226289BAF001B5C6B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */; };
+		5EB3C15B26289FFE001B5C6B /* FourSquareAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */; };
+		5EC8A342262860EA00012BBE /* CoffeeLocationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */; };
+		5EC8A34D2628625800012BBE /* MapViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A34C2628625800012BBE /* MapViewDelegateProtocol.swift */; };
+		5EC8A3532628626100012BBE /* MapViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */; };
+		5EC8A3542628626100012BBE /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3522628626100012BBE /* MapViewPresenter.swift */; };
+		5EC8A3AB2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3AA2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5E5B93422624640F00DA8943 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5E5B93232624640B00DA8943 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5E5B932A2624640B00DA8943;
-			remoteInfo = CoffeeCravin;
-		};
-		5E5B934D2624640F00DA8943 /* PBXContainerItemProxy */ = {
+		5EC8A3A3262881D100012BBE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E5B93232624640B00DA8943 /* Project object */;
 			proxyType = 1;
@@ -46,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConverter.swift; sourceTree = "<group>"; };
 		5E5B932B2624640B00DA8943 /* CoffeeCravin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCravin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5B932E2624640B00DA8943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5B93302624640B00DA8943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,24 +51,25 @@
 		5E5B93372624640E00DA8943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E5B933A2624640E00DA8943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E5B933C2624640E00DA8943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E5B93412624640F00DA8943 /* CoffeeCravinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCravinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E5B93452624640F00DA8943 /* CoffeeCravinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCravinTests.swift; sourceTree = "<group>"; };
-		5E5B93472624640F00DA8943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E5B934C2624640F00DA8943 /* CoffeeCravinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCravinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E5B93502624640F00DA8943 /* CoffeeCravinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCravinUITests.swift; sourceTree = "<group>"; };
-		5E5B93522624640F00DA8943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E5B9368262465EB00DA8943 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5E5B936F2624676B00DA8943 /* CCGetCoffeeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCGetCoffeeButton.swift; sourceTree = "<group>"; };
-		5E5B937F262474A100DA8943 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5E5B938526248A8F00DA8943 /* CoffeeShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsModel.swift; sourceTree = "<group>"; };
 		5E5B938E2624B47F00DA8943 /* FourSquareAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIModel.swift; sourceTree = "<group>"; };
 		5E5B93932624B7C800DA8943 /* CCErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCErrors.swift; sourceTree = "<group>"; };
 		5E5FC9F826273E3000D71849 /* CCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapView.swift; sourceTree = "<group>"; };
 		5E5FCA002627481500D71849 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapAnnotationCoffeeView.swift; sourceTree = "<group>"; };
-		5E5FCA2C2627684500D71849 /* DistanceFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceFormatter.swift; sourceTree = "<group>"; };
 		5E5FCA32262768C400D71849 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
 		5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeysForDemoUnsafe.plist; sourceTree = "<group>"; };
+		5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIStub.swift; sourceTree = "<group>"; };
+		5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManager.swift; sourceTree = "<group>"; };
+		5EC8A34C2628625800012BBE /* MapViewDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewDelegateProtocol.swift; sourceTree = "<group>"; };
+		5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenterProtocol.swift; sourceTree = "<group>"; };
+		5EC8A3522628626100012BBE /* MapViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
+		5EC8A39E262881D100012BBE /* CoffeeCravinTestIng.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCravinTestIng.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC8A3A2262881D100012BBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EC8A3AA2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +80,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E5B933E2624640F00DA8943 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E5B93492624640F00DA8943 /* Frameworks */ = {
+		5EC8A39B262881D100012BBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,12 +90,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E525C182628CA6A000601B4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5EC8A34C2628625800012BBE /* MapViewDelegateProtocol.swift */,
+				5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5E525C192628CA76000601B4 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				5EC8A3522628626100012BBE /* MapViewPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		5E5B93222624640B00DA8943 = {
 			isa = PBXGroup;
 			children = (
 				5E5B932D2624640B00DA8943 /* CoffeeCravin */,
-				5E5B93442624640F00DA8943 /* CoffeeCravinTests */,
-				5E5B934F2624640F00DA8943 /* CoffeeCravinUITests */,
+				5EC8A39F262881D100012BBE /* CoffeeCravinTestIng */,
 				5E5B932C2624640B00DA8943 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,8 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5B932B2624640B00DA8943 /* CoffeeCravin.app */,
-				5E5B93412624640F00DA8943 /* CoffeeCravinTests.xctest */,
-				5E5B934C2624640F00DA8943 /* CoffeeCravinUITests.xctest */,
+				5EC8A39E262881D100012BBE /* CoffeeCravinTestIng.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +128,8 @@
 		5E5B932D2624640B00DA8943 /* CoffeeCravin */ = {
 			isa = PBXGroup;
 			children = (
+				5E525C182628CA6A000601B4 /* Protocols */,
+				5E525C192628CA76000601B4 /* Presenters */,
 				5E5FCA31262768AB00D71849 /* Extensions */,
 				5E8D288F2624C9550047598A /* Utilities */,
 				5E5B93932624B7C800DA8943 /* CCErrors.swift */,
@@ -138,24 +147,6 @@
 			path = CoffeeCravin;
 			sourceTree = "<group>";
 		};
-		5E5B93442624640F00DA8943 /* CoffeeCravinTests */ = {
-			isa = PBXGroup;
-			children = (
-				5E5B93452624640F00DA8943 /* CoffeeCravinTests.swift */,
-				5E5B93472624640F00DA8943 /* Info.plist */,
-			);
-			path = CoffeeCravinTests;
-			sourceTree = "<group>";
-		};
-		5E5B934F2624640F00DA8943 /* CoffeeCravinUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5E5B93502624640F00DA8943 /* CoffeeCravinUITests.swift */,
-				5E5B93522624640F00DA8943 /* Info.plist */,
-			);
-			path = CoffeeCravinUITests;
-			sourceTree = "<group>";
-		};
 		5E5B93642624650500DA8943 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +158,7 @@
 		5E5B936D262466F300DA8943 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				5E5B937F262474A100DA8943 /* NetworkManager.swift */,
+				5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -220,9 +211,20 @@
 			children = (
 				5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */,
 				5E5FCA002627481500D71849 /* Images.swift */,
-				5E5FCA2C2627684500D71849 /* DistanceFormatter.swift */,
+				5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5EC8A39F262881D100012BBE /* CoffeeCravinTestIng */ = {
+			isa = PBXGroup;
+			children = (
+				5EC8A3A2262881D100012BBE /* Info.plist */,
+				5EC8A3AA2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift */,
+				5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */,
+				5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */,
+			);
+			path = CoffeeCravinTestIng;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,41 +247,23 @@
 			productReference = 5E5B932B2624640B00DA8943 /* CoffeeCravin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5E5B93402624640F00DA8943 /* CoffeeCravinTests */ = {
+		5EC8A39D262881D100012BBE /* CoffeeCravinTestIng */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5E5B93582624640F00DA8943 /* Build configuration list for PBXNativeTarget "CoffeeCravinTests" */;
+			buildConfigurationList = 5EC8A3A5262881D100012BBE /* Build configuration list for PBXNativeTarget "CoffeeCravinTestIng" */;
 			buildPhases = (
-				5E5B933D2624640F00DA8943 /* Sources */,
-				5E5B933E2624640F00DA8943 /* Frameworks */,
-				5E5B933F2624640F00DA8943 /* Resources */,
+				5EC8A39A262881D100012BBE /* Sources */,
+				5EC8A39B262881D100012BBE /* Frameworks */,
+				5EC8A39C262881D100012BBE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5E5B93432624640F00DA8943 /* PBXTargetDependency */,
+				5EC8A3A4262881D100012BBE /* PBXTargetDependency */,
 			);
-			name = CoffeeCravinTests;
-			productName = CoffeeCravinTests;
-			productReference = 5E5B93412624640F00DA8943 /* CoffeeCravinTests.xctest */;
+			name = CoffeeCravinTestIng;
+			productName = CoffeeCravinTestIng;
+			productReference = 5EC8A39E262881D100012BBE /* CoffeeCravinTestIng.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5E5B934B2624640F00DA8943 /* CoffeeCravinUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5E5B935B2624640F00DA8943 /* Build configuration list for PBXNativeTarget "CoffeeCravinUITests" */;
-			buildPhases = (
-				5E5B93482624640F00DA8943 /* Sources */,
-				5E5B93492624640F00DA8943 /* Frameworks */,
-				5E5B934A2624640F00DA8943 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5E5B934E2624640F00DA8943 /* PBXTargetDependency */,
-			);
-			name = CoffeeCravinUITests;
-			productName = CoffeeCravinUITests;
-			productReference = 5E5B934C2624640F00DA8943 /* CoffeeCravinUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -293,11 +277,7 @@
 					5E5B932A2624640B00DA8943 = {
 						CreatedOnToolsVersion = 12.4;
 					};
-					5E5B93402624640F00DA8943 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 5E5B932A2624640B00DA8943;
-					};
-					5E5B934B2624640F00DA8943 = {
+					5EC8A39D262881D100012BBE = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 5E5B932A2624640B00DA8943;
 					};
@@ -317,8 +297,7 @@
 			projectRoot = "";
 			targets = (
 				5E5B932A2624640B00DA8943 /* CoffeeCravin */,
-				5E5B93402624640F00DA8943 /* CoffeeCravinTests */,
-				5E5B934B2624640F00DA8943 /* CoffeeCravinUITests */,
+				5EC8A39D262881D100012BBE /* CoffeeCravinTestIng */,
 			);
 		};
 /* End PBXProject section */
@@ -335,14 +314,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E5B933F2624640F00DA8943 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E5B934A2624640F00DA8943 /* Resources */ = {
+		5EC8A39C262881D100012BBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,48 +330,40 @@
 			files = (
 				5E5B93702624676B00DA8943 /* CCGetCoffeeButton.swift in Sources */,
 				5E5B938626248A8F00DA8943 /* CoffeeShopsModel.swift in Sources */,
+				5EC8A3542628626100012BBE /* MapViewPresenter.swift in Sources */,
+				5EC8A34D2628625800012BBE /* MapViewDelegateProtocol.swift in Sources */,
 				5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */,
+				5E525C3B2628CB3D000601B4 /* DistanceConverter.swift in Sources */,
 				5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */,
 				5E5FCA0726274C9F00D71849 /* CCMapAnnotationCoffeeView.swift in Sources */,
-				5E5B9380262474A100DA8943 /* NetworkManager.swift in Sources */,
 				5E5FC9F926273E3000D71849 /* CCMapView.swift in Sources */,
 				5E5B93942624B7C800DA8943 /* CCErrors.swift in Sources */,
 				5E5B938F2624B47F00DA8943 /* FourSquareAPIModel.swift in Sources */,
 				5E5FCA012627481500D71849 /* Images.swift in Sources */,
-				5E5FCA2D2627684500D71849 /* DistanceFormatter.swift in Sources */,
 				5E5B9369262465EB00DA8943 /* MapViewController.swift in Sources */,
 				5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */,
+				5EC8A342262860EA00012BBE /* CoffeeLocationNetworkManager.swift in Sources */,
+				5EC8A3532628626100012BBE /* MapViewPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5E5B933D2624640F00DA8943 /* Sources */ = {
+		5EC8A39A262881D100012BBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E5B93462624640F00DA8943 /* CoffeeCravinTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E5B93482624640F00DA8943 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5E5B93512624640F00DA8943 /* CoffeeCravinUITests.swift in Sources */,
+				5EC8A3AB2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift in Sources */,
+				5EB3C15226289BAF001B5C6B /* MockURLProtocol.swift in Sources */,
+				5EB3C15B26289FFE001B5C6B /* FourSquareAPIStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5E5B93432624640F00DA8943 /* PBXTargetDependency */ = {
+		5EC8A3A4262881D100012BBE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5E5B932A2624640B00DA8943 /* CoffeeCravin */;
-			targetProxy = 5E5B93422624640F00DA8943 /* PBXContainerItemProxy */;
-		};
-		5E5B934E2624640F00DA8943 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5E5B932A2624640B00DA8943 /* CoffeeCravin */;
-			targetProxy = 5E5B934D2624640F00DA8943 /* PBXContainerItemProxy */;
+			targetProxy = 5EC8A3A3262881D100012BBE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -577,21 +541,19 @@
 			};
 			name = Release;
 		};
-		5E5B93592624640F00DA8943 /* Debug */ = {
+		5EC8A3A6262881D100012BBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39K8Q3VFHM;
-				INFOPLIST_FILE = CoffeeCravinTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				INFOPLIST_FILE = CoffeeCravinTestIng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roycroft-labs.CoffeeCravinTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roycroft-labs.CoffeeCravinTestIng";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -599,65 +561,23 @@
 			};
 			name = Debug;
 		};
-		5E5B935A2624640F00DA8943 /* Release */ = {
+		5EC8A3A7262881D100012BBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39K8Q3VFHM;
-				INFOPLIST_FILE = CoffeeCravinTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				INFOPLIST_FILE = CoffeeCravinTestIng/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roycroft-labs.CoffeeCravinTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roycroft-labs.CoffeeCravinTestIng";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoffeeCravin.app/CoffeeCravin";
-			};
-			name = Release;
-		};
-		5E5B935C2624640F00DA8943 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39K8Q3VFHM;
-				INFOPLIST_FILE = CoffeeCravinUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roycroft-labs.CoffeeCravinUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoffeeCravin;
-			};
-			name = Debug;
-		};
-		5E5B935D2624640F00DA8943 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 39K8Q3VFHM;
-				INFOPLIST_FILE = CoffeeCravinUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roycroft-labs.CoffeeCravinUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CoffeeCravin;
 			};
 			name = Release;
 		};
@@ -682,20 +602,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5E5B93582624640F00DA8943 /* Build configuration list for PBXNativeTarget "CoffeeCravinTests" */ = {
+		5EC8A3A5262881D100012BBE /* Build configuration list for PBXNativeTarget "CoffeeCravinTestIng" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E5B93592624640F00DA8943 /* Debug */,
-				5E5B935A2624640F00DA8943 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5E5B935B2624640F00DA8943 /* Build configuration list for PBXNativeTarget "CoffeeCravinUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5E5B935C2624640F00DA8943 /* Debug */,
-				5E5B935D2624640F00DA8943 /* Release */,
+				5EC8A3A6262881D100012BBE /* Debug */,
+				5EC8A3A7262881D100012BBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
