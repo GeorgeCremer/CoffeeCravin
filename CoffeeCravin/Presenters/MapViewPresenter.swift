@@ -9,20 +9,23 @@ import Foundation
 
 class MapViewPresenter: MapViewPresenterProtocol {
     private var coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol!
-    private weak var delegate: MapViewDelegate?
+    private weak var networkDelegate: CoffeeLocationNetworkManagerDelegate?
 
-    required init(coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol, delegate: MapViewDelegate) {
+
+    required init(coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol, networkDelegate: CoffeeLocationNetworkManagerDelegate ) {
         self.coffeeLocationNetworkManager = coffeeLocationNetworkManager
-        self.delegate = delegate
+        self.networkDelegate = networkDelegate
     }
-
+    
     func findCoffeeShops(latitude: Double, longitude: Double) {
         coffeeLocationNetworkManager.getNearbyCoffeeLocations(latitude: latitude, longitude: longitude) { result in
             switch result {
+           
             case let .success(result):
-                self.delegate?.successfullyRetrievedCoffeeShops(coffeeShops: result)
+                self.networkDelegate?.successfullyRetrievedCoffeeShops(coffeeShops: result)
+            
             case let .failure(error):
-                self.delegate?.errorHandler(error: error)
+                self.networkDelegate?.errorHandler(error: error)
             }
         }
     }

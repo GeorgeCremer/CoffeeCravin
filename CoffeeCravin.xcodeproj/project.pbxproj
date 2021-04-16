@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5E525C3B2628CB3D000601B4 /* DistanceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */; };
+		5E525C492629E8AC000601B4 /* CCRecentreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C482629E8AC000601B4 /* CCRecentreButton.swift */; };
+		5E525C4F2629FAAD000601B4 /* CCMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */; };
 		5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B932E2624640B00DA8943 /* AppDelegate.swift */; };
 		5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93302624640B00DA8943 /* SceneDelegate.swift */; };
 		5E5B93362624640B00DA8943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B93342624640B00DA8943 /* Main.storyboard */; };
@@ -26,7 +28,7 @@
 		5EB3C15226289BAF001B5C6B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */; };
 		5EB3C15B26289FFE001B5C6B /* FourSquareAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */; };
 		5EC8A342262860EA00012BBE /* CoffeeLocationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */; };
-		5EC8A34D2628625800012BBE /* MapViewDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A34C2628625800012BBE /* MapViewDelegateProtocol.swift */; };
+		5EC8A34D2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift */; };
 		5EC8A3532628626100012BBE /* MapViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */; };
 		5EC8A3542628626100012BBE /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3522628626100012BBE /* MapViewPresenter.swift */; };
 		5EC8A3AB2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3AA2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConverter.swift; sourceTree = "<group>"; };
+		5E525C482629E8AC000601B4 /* CCRecentreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCRecentreButton.swift; sourceTree = "<group>"; };
+		5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapViewDelegate.swift; sourceTree = "<group>"; };
 		5E5B932B2624640B00DA8943 /* CoffeeCravin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCravin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5B932E2624640B00DA8943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5B93302624640B00DA8943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIStub.swift; sourceTree = "<group>"; };
 		5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManager.swift; sourceTree = "<group>"; };
-		5EC8A34C2628625800012BBE /* MapViewDelegateProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewDelegateProtocol.swift; sourceTree = "<group>"; };
+		5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManagerProtocol.swift; sourceTree = "<group>"; };
 		5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		5EC8A3522628626100012BBE /* MapViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 		5EC8A39E262881D100012BBE /* CoffeeCravinTestIng.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCravinTestIng.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +97,9 @@
 		5E525C182628CA6A000601B4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				5EC8A34C2628625800012BBE /* MapViewDelegateProtocol.swift */,
+				5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift */,
 				5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */,
+				5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5B936F2624676B00DA8943 /* CCGetCoffeeButton.swift */,
+				5E525C482629E8AC000601B4 /* CCRecentreButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -329,9 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5B93702624676B00DA8943 /* CCGetCoffeeButton.swift in Sources */,
+				5E525C492629E8AC000601B4 /* CCRecentreButton.swift in Sources */,
 				5E5B938626248A8F00DA8943 /* CoffeeShopsModel.swift in Sources */,
 				5EC8A3542628626100012BBE /* MapViewPresenter.swift in Sources */,
-				5EC8A34D2628625800012BBE /* MapViewDelegateProtocol.swift in Sources */,
+				5EC8A34D2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift in Sources */,
 				5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */,
 				5E525C3B2628CB3D000601B4 /* DistanceConverter.swift in Sources */,
 				5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */,
@@ -343,6 +350,7 @@
 				5E5B9369262465EB00DA8943 /* MapViewController.swift in Sources */,
 				5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */,
 				5EC8A342262860EA00012BBE /* CoffeeLocationNetworkManager.swift in Sources */,
+				5E525C4F2629FAAD000601B4 /* CCMapViewDelegate.swift in Sources */,
 				5EC8A3532628626100012BBE /* MapViewPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

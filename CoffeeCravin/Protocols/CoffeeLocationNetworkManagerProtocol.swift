@@ -7,7 +7,8 @@
 
 import Foundation
 
-protocol MapViewDelegate: AnyObject {
+protocol CoffeeLocationNetworkManagerDelegate: AnyObject {
     func successfullyRetrievedCoffeeShops(coffeeShops: [CoffeeShopsModel])
     func errorHandler(error: CCErrors)
+
 }

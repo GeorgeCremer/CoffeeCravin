@@ -6,8 +6,12 @@
 //
 
 import Foundation
+import MapKit
 
 protocol MapViewPresenterProtocol: AnyObject {
-    init(coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol, delegate: MapViewDelegate)
+    
+    init(coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol, networkDelegate: CoffeeLocationNetworkManagerDelegate)
     func findCoffeeShops(latitude: Double, longitude: Double)
+    
+    
 }

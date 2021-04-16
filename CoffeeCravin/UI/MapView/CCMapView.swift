@@ -43,31 +43,8 @@ class CCMapView: MKMapView {
             removeAnnotations(annotations)
         }
     }
+
+
 }
 
-extension MapViewController: MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
-        let identifier = "coffeePin"
 
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CCMapAnnotationCoffeeView
-
-        if annotationView == nil {
-            annotationView = CCMapAnnotationCoffeeView(annotation: annotation, reuseIdentifier: identifier)
-        }
-        
-        annotationView!.canShowCallout = true
-        annotationView!.calloutOffset = CGPoint(x: -5, y: 5)
-        annotationView!.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-
-        let subtitleLabel = UILabel()
-        let subtitle = annotation.subtitle as? String
-        subtitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        subtitleLabel.text = subtitle
-        subtitleLabel.numberOfLines = 0
-
-        annotationView!.detailCalloutAccessoryView = subtitleLabel
-
-        return annotationView
-    }
-}

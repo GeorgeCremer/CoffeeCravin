@@ -11,4 +11,8 @@ import UIKit
 enum Images {
     static let coffeeButtonIcon = UIImage(named: "coffeeButtonIcon")
     static let coffeePin = UIImage(named: "coffeePin")
+    
+    static let recenterEnabled = UIImage(named: "recenterEnabled")
+    static let recenterDisabled = UIImage(named: "recenterDisabled")
+
 }
