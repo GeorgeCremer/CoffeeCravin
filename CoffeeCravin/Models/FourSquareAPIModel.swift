@@ -8,21 +8,39 @@
 import Foundation
 
 struct FourSquareData: Codable {
-    var response: FourSquareVenues
+    var response: FourSquareResponse
 }
 
-struct FourSquareVenues: Codable {
-    var venues: [FourSquareVenue]
+struct FourSquareResponse: Codable {
+    var groups: [FourSquareGroup]
+}
+
+struct FourSquareGroup: Codable {
+    var items: [FourSquareGroupItem]
+
+}
+
+struct FourSquareGroupItem: Codable {
+    let venue: FourSquareVenue
 }
 
 struct FourSquareVenue: Codable {
+    
     var name: String?
-    var location: FourSquareVenueLocation
+    var location: FourSquareVenueLocation?
+    let rating: Double?
+    let hours: Hours?
 }
 
 struct FourSquareVenueLocation: Codable {
-    var formattedAddress: [String?]?
+    var address: String?
     var lat: Double?
     var lng: Double?
     var distance: Int?
+    var formattedAddress: [String]?
+}
+
+struct Hours: Codable {
+    var status: String?
+    var isOpen: Bool?
 }

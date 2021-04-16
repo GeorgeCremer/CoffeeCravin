@@ -7,10 +7,20 @@
 
 import Foundation
 
+
 struct CoffeeShopsModel: Codable {
+        
     let name: String
+    let rating: Double?
     let address: String
     let lat: Double
     let lng: Double
     let distance: Int
-}
+    let status: String?
+    let isOpen: Bool?
+
+    }
+
+
+
+
