@@ -43,8 +43,4 @@ class CCMapView: MKMapView {
             removeAnnotations(annotations)
         }
     }
-
-
 }
-
-

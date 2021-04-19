@@ -9,5 +9,4 @@ import CoreLocation
 
 protocol CCMapViewDelegate: AnyObject {
     func mapViewCenterCoordinatesDidChange(coordinates: CLLocationCoordinate2D)
-
 }

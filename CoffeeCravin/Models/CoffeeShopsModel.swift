@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 struct CoffeeShopsModel: Codable {
-        
     let name: String
     let rating: Double?
     let address: String
@@ -18,9 +16,4 @@ struct CoffeeShopsModel: Codable {
     let distance: Int
     let status: String?
     let isOpen: Bool?
-
-    }
-
-
-
-
+}

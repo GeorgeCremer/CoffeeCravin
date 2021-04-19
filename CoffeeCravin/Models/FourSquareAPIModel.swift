@@ -17,7 +17,6 @@ struct FourSquareResponse: Codable {
 
 struct FourSquareGroup: Codable {
     var items: [FourSquareGroupItem]
-
 }
 
 struct FourSquareGroupItem: Codable {
@@ -25,7 +24,6 @@ struct FourSquareGroupItem: Codable {
 }
 
 struct FourSquareVenue: Codable {
-    
     var name: String?
     var location: FourSquareVenueLocation?
     let rating: Double?

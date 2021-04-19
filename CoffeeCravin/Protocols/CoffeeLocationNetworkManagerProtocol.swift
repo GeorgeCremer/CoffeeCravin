@@ -10,5 +10,4 @@ import Foundation
 protocol CoffeeLocationNetworkManagerDelegate: AnyObject {
     func successfullyRetrievedCoffeeShops(coffeeShops: [CoffeeShopsModel])
     func errorHandler(error: CCErrors)
-
 }

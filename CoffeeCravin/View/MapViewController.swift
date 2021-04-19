@@ -29,17 +29,14 @@ class MapViewController: UIViewController {
         configMapView()
         configLocationManager()
         configButtons()
-        
+
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
     }
-    
 
     @objc func appMovedToBackground() {
         print("App moved to background!")
     }
-
-
 
     func configLocationManager() {
         locationManager = CLLocationManager()
@@ -52,16 +49,15 @@ class MapViewController: UIViewController {
         mapView.delegate = self
         mapView.register(CCMapAnnotationCoffeeView.self, forAnnotationViewWithReuseIdentifier: "coffeePin")
         mapView.setUserTrackingMode(.follow, animated: true)
-        
     }
 
     func configButtons() {
         let size: CGFloat = 60
         let padding: CGFloat = 20
-       
+
         coffeeSearchButton = CCGetCoffeeButton(cornerRadius: size / 2)
         view.addSubview(coffeeSearchButton)
-        
+
         reCenterButton = CCRecenterButton()
         view.addSubview(reCenterButton)
 
@@ -75,14 +71,12 @@ class MapViewController: UIViewController {
             reCenterButton.widthAnchor.constraint(equalToConstant: size),
             reCenterButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             reCenterButton.bottomAnchor.constraint(equalTo: coffeeSearchButton.topAnchor, constant: -padding),
-       ])
-        
+        ])
+
         coffeeSearchButton.addTarget(self, action: #selector(coffeeSearchButtonTapped), for: .touchUpInside)
         reCenterButton.addTarget(self, action: #selector(reCenterButtonTapped), for: .touchUpInside)
-
     }
 
-    
     @objc func reCenterButtonTapped() {
         reCenterButton.isEnabled.toggle()
         if !reCenterButton.isEnabled {
@@ -91,7 +85,6 @@ class MapViewController: UIViewController {
     }
 
     @objc func coffeeSearchButtonTapped() {
-        print("coffeeSearchButtonTapped")
         let centreCoordinates = mapView.centerCoordinate
         mapViewPresenter?.findCoffeeShops(latitude: centreCoordinates.latitude, longitude: centreCoordinates.longitude)
     }
@@ -100,17 +93,12 @@ class MapViewController: UIViewController {
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         currentLocation = locations[0].coordinate
-        print("currentLocation: \(currentLocation)")
     }
 
-    func locationManager(_: CLLocationManager, didFailWithError _: Error) {
-        
-    }
+    func locationManager(_: CLLocationManager, didFailWithError _: Error) {}
 }
 
 extension MapViewController: CoffeeLocationNetworkManagerDelegate {
- 
-    
     func successfullyRetrievedCoffeeShops(coffeeShops: [CoffeeShopsModel]) {
         print("successfullyRetrievedCoffeeShops MapViewDelegate: \(coffeeShops)")
         mapView.addCoffeeLocations(coffeeShops: coffeeShops)
@@ -123,11 +111,10 @@ extension MapViewController: CoffeeLocationNetworkManagerDelegate {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        
         if annotation.isKind(of: MKUserLocation.self) {
-         return nil
+            return nil
         }
-        
+
         let identifier = "coffeePin"
 
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CCMapAnnotationCoffeeView
@@ -135,11 +122,11 @@ extension MapViewController: MKMapViewDelegate {
         if annotationView == nil {
             annotationView = CCMapAnnotationCoffeeView(annotation: annotation, reuseIdentifier: identifier)
         }
-        
+
         // TODO: Refactor
         annotationView!.canShowCallout = true
         annotationView!.calloutOffset = CGPoint(x: -5, y: 5)
-        
+
         let navButton = UIButton(type: .detailDisclosure)
         navButton.tintColor = .systemPink
         navButton.setImage(UIImage(systemName: "car.fill"), for: .normal)
@@ -154,29 +141,10 @@ extension MapViewController: MKMapViewDelegate {
 
         return annotationView
     }
-    
-     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        
-        guard let coordinate = view.annotation?.coordinate else {return}
+
+    func mapView(_: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped _: UIControl) {
+        guard let coordinate = view.annotation?.coordinate else { return }
         let appleURL = "http://maps.apple.com/?daddr=\(coordinate.latitude),\(coordinate.longitude)"
-        UIApplication.shared.open(URL(string:appleURL)!, options: [:], completionHandler: nil)
-
- 
-     }
-    
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-//        guard let current = currentLocation else {return}
-//        let mapCenter = mapView.centerCoordinate
-//
-//        if current.latitude == mapCenter.latitude, current.longitude == mapCenter.longitude {
-//            print("centerCoordinate MATCH - DISABLE BUTTON")
-//            reCenterButton.isEnabled = false
-//        } else {
-//            print("centerCoordinate NOT EQUAL - ENABLE BUTTON")
-//            reCenterButton.isEnabled = true
-//        }
+        UIApplication.shared.open(URL(string: appleURL)!, options: [:], completionHandler: nil)
     }
-
-    
-    
 }

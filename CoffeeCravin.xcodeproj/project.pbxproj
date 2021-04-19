@@ -10,6 +10,7 @@
 		5E525C3B2628CB3D000601B4 /* DistanceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */; };
 		5E525C492629E8AC000601B4 /* CCRecentreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C482629E8AC000601B4 /* CCRecentreButton.swift */; };
 		5E525C4F2629FAAD000601B4 /* CCMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */; };
+		5E560CFD262DA69A0045A7F5 /* FourSquareCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E560CFC262DA6990045A7F5 /* FourSquareCredentials.plist */; };
 		5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B932E2624640B00DA8943 /* AppDelegate.swift */; };
 		5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93302624640B00DA8943 /* SceneDelegate.swift */; };
 		5E5B93362624640B00DA8943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B93342624640B00DA8943 /* Main.storyboard */; };
@@ -24,7 +25,7 @@
 		5E5FCA012627481500D71849 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA002627481500D71849 /* Images.swift */; };
 		5E5FCA0726274C9F00D71849 /* CCMapAnnotationCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */; };
 		5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA32262768C400D71849 /* Double+Ext.swift */; };
-		5E8D28912624C9A50047598A /* KeysForDemoUnsafe.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */; };
+		5E8D28912624C9A50047598A /* privateFourSquareCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E8D28902624C9A50047598A /* privateFourSquareCredentials.plist */; };
 		5EB3C15226289BAF001B5C6B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */; };
 		5EB3C15B26289FFE001B5C6B /* FourSquareAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */; };
 		5EC8A342262860EA00012BBE /* CoffeeLocationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */; };
@@ -48,13 +49,14 @@
 		5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConverter.swift; sourceTree = "<group>"; };
 		5E525C482629E8AC000601B4 /* CCRecentreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCRecentreButton.swift; sourceTree = "<group>"; };
 		5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapViewDelegate.swift; sourceTree = "<group>"; };
+		5E560CFC262DA6990045A7F5 /* FourSquareCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FourSquareCredentials.plist; path = CoffeeCravin/Utilities/FourSquareCredentials.plist; sourceTree = SOURCE_ROOT; };
 		5E5B932B2624640B00DA8943 /* CoffeeCravin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCravin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5B932E2624640B00DA8943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5B93302624640B00DA8943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5E5B93352624640B00DA8943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E5B93372624640E00DA8943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E5B933A2624640E00DA8943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5E5B933C2624640E00DA8943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E5B933C2624640E00DA8943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = CoffeeCravin/Support/Info.plist; sourceTree = SOURCE_ROOT; };
 		5E5B9368262465EB00DA8943 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5E5B936F2624676B00DA8943 /* CCGetCoffeeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCGetCoffeeButton.swift; sourceTree = "<group>"; };
 		5E5B938526248A8F00DA8943 /* CoffeeShopsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopsModel.swift; sourceTree = "<group>"; };
@@ -64,7 +66,7 @@
 		5E5FCA002627481500D71849 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapAnnotationCoffeeView.swift; sourceTree = "<group>"; };
 		5E5FCA32262768C400D71849 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
-		5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KeysForDemoUnsafe.plist; sourceTree = "<group>"; };
+		5E8D28902624C9A50047598A /* privateFourSquareCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = privateFourSquareCredentials.plist; path = CoffeeCravin/Utilities/privateFourSquareCredentials.plist; sourceTree = SOURCE_ROOT; };
 		5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIStub.swift; sourceTree = "<group>"; };
 		5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManager.swift; sourceTree = "<group>"; };
@@ -112,6 +114,18 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
+		5E560CFB262DA5400045A7F5 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				5E5B932E2624640B00DA8943 /* AppDelegate.swift */,
+				5E5B93302624640B00DA8943 /* SceneDelegate.swift */,
+				5E5B93372624640E00DA8943 /* Assets.xcassets */,
+				5E5B93392624640E00DA8943 /* LaunchScreen.storyboard */,
+				5E5B933C2624640E00DA8943 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		5E5B93222624640B00DA8943 = {
 			isa = PBXGroup;
 			children = (
@@ -136,28 +150,23 @@
 				5E525C182628CA6A000601B4 /* Protocols */,
 				5E525C192628CA76000601B4 /* Presenters */,
 				5E5FCA31262768AB00D71849 /* Extensions */,
-				5E8D288F2624C9550047598A /* Utilities */,
-				5E5B93932624B7C800DA8943 /* CCErrors.swift */,
+				5E5B93642624650500DA8943 /* View */,
 				5E5B936D262466F300DA8943 /* Managers */,
 				5E5B938426248A7100DA8943 /* Models */,
 				5E5B936E2624671900DA8943 /* UI */,
-				5E5B932E2624640B00DA8943 /* AppDelegate.swift */,
-				5E5B93302624640B00DA8943 /* SceneDelegate.swift */,
-				5E5B93642624650500DA8943 /* Controllers */,
-				5E5B93342624640B00DA8943 /* Main.storyboard */,
-				5E5B93372624640E00DA8943 /* Assets.xcassets */,
-				5E5B93392624640E00DA8943 /* LaunchScreen.storyboard */,
-				5E5B933C2624640E00DA8943 /* Info.plist */,
+				5E8D288F2624C9550047598A /* Utilities */,
+				5E560CFB262DA5400045A7F5 /* Support */,
 			);
 			path = CoffeeCravin;
 			sourceTree = "<group>";
 		};
-		5E5B93642624650500DA8943 /* Controllers */ = {
+		5E5B93642624650500DA8943 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5E5B9368262465EB00DA8943 /* MapViewController.swift */,
+				5E5B93342624640B00DA8943 /* Main.storyboard */,
 			);
-			path = Controllers;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5E5B936D262466F300DA8943 /* Managers */ = {
@@ -215,9 +224,11 @@
 		5E8D288F2624C9550047598A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5E8D28902624C9A50047598A /* KeysForDemoUnsafe.plist */,
+				5E8D28902624C9A50047598A /* privateFourSquareCredentials.plist */,
+				5E560CFC262DA6990045A7F5 /* FourSquareCredentials.plist */,
 				5E5FCA002627481500D71849 /* Images.swift */,
 				5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */,
+				5E5B93932624B7C800DA8943 /* CCErrors.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -316,7 +327,8 @@
 				5E5B933B2624640E00DA8943 /* LaunchScreen.storyboard in Resources */,
 				5E5B93382624640E00DA8943 /* Assets.xcassets in Resources */,
 				5E5B93362624640B00DA8943 /* Main.storyboard in Resources */,
-				5E8D28912624C9A50047598A /* KeysForDemoUnsafe.plist in Resources */,
+				5E560CFD262DA69A0045A7F5 /* FourSquareCredentials.plist in Resources */,
+				5E8D28912624C9A50047598A /* privateFourSquareCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39K8Q3VFHM;
-				INFOPLIST_FILE = CoffeeCravin/Info.plist;
+				INFOPLIST_FILE = CoffeeCravin/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -537,7 +549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39K8Q3VFHM;
-				INFOPLIST_FILE = CoffeeCravin/Info.plist;
+				INFOPLIST_FILE = CoffeeCravin/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
