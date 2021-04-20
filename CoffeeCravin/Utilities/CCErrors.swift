@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CCErrors: String, Error {
+enum CCErrors: String, Error, CaseIterable {
     case unableToCompleteNetworkRequest = "Unable to complete network request please check your internet connection"
     case unableToCompleteNetworkRequestURLError = "Unable to complete network request due to invalid URL"
     case invalidResponse = "Invalid response from the server. Please try again."

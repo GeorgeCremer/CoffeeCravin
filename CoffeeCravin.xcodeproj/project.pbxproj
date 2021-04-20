@@ -7,10 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E525C3B2628CB3D000601B4 /* DistanceConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */; };
+		5E20570A262F100B0010DBFB /* CCAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E205709262F100B0010DBFB /* CCAlertViewController.swift */; };
+		5E20570E262F10590010DBFB /* CCModalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20570D262F10590010DBFB /* CCModalButton.swift */; };
+		5E205712262F10C20010DBFB /* CCBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E205711262F10C20010DBFB /* CCBodyLabel.swift */; };
+		5E205719262F10E20010DBFB /* CCTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E205718262F10E20010DBFB /* CCTitleLabel.swift */; };
+		5E20571D262F11370010DBFB /* CCContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20571C262F11370010DBFB /* CCContainerView.swift */; };
+		5E205724262F121F0010DBFB /* CCMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E205723262F121F0010DBFB /* CCMenuButton.swift */; };
+		5E20572B262F138A0010DBFB /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20572A262F138A0010DBFB /* ViewController+Ext.swift */; };
+		5E20572F262F17500010DBFB /* MenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E20572E262F17500010DBFB /* MenuDelegate.swift */; };
+		5E205738262F1C0A0010DBFB /* CCMenuButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E205737262F1C0A0010DBFB /* CCMenuButtonTests.swift */; };
 		5E525C492629E8AC000601B4 /* CCRecentreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C482629E8AC000601B4 /* CCRecentreButton.swift */; };
 		5E525C4F2629FAAD000601B4 /* CCMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */; };
 		5E560CFD262DA69A0045A7F5 /* FourSquareCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E560CFC262DA6990045A7F5 /* FourSquareCredentials.plist */; };
+		5E560D0C262ECF6D0045A7F5 /* CCLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E560D0B262ECF6D0045A7F5 /* CCLocationManager.swift */; };
+		5E593034262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593033262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift */; };
+		5E59303A262F27E6007EDF65 /* MockNetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593039262F27E6007EDF65 /* MockNetworkDelegate.swift */; };
+		5E59303E262F2803007EDF65 /* MockMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E59303D262F2803007EDF65 /* MockMenuDelegate.swift */; };
 		5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B932E2624640B00DA8943 /* AppDelegate.swift */; };
 		5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93302624640B00DA8943 /* SceneDelegate.swift */; };
 		5E5B93362624640B00DA8943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B93342624640B00DA8943 /* Main.storyboard */; };
@@ -22,14 +34,15 @@
 		5E5B938F2624B47F00DA8943 /* FourSquareAPIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B938E2624B47F00DA8943 /* FourSquareAPIModel.swift */; };
 		5E5B93942624B7C800DA8943 /* CCErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93932624B7C800DA8943 /* CCErrors.swift */; };
 		5E5FC9F926273E3000D71849 /* CCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FC9F826273E3000D71849 /* CCMapView.swift */; };
-		5E5FCA012627481500D71849 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA002627481500D71849 /* Images.swift */; };
+		5E5FCA012627481500D71849 /* CCImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA002627481500D71849 /* CCImages.swift */; };
 		5E5FCA0726274C9F00D71849 /* CCMapAnnotationCoffeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */; };
 		5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FCA32262768C400D71849 /* Double+Ext.swift */; };
-		5E8D28912624C9A50047598A /* privateFourSquareCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E8D28902624C9A50047598A /* privateFourSquareCredentials.plist */; };
+		5E6D8335262F21FE007A49E0 /* MockMapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D8334262F21FE007A49E0 /* MockMapViewPresenter.swift */; };
+		5E6D8339262F22C9007A49E0 /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6D8338262F22C9007A49E0 /* MapViewControllerTests.swift */; };
 		5EB3C15226289BAF001B5C6B /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */; };
 		5EB3C15B26289FFE001B5C6B /* FourSquareAPIStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */; };
 		5EC8A342262860EA00012BBE /* CoffeeLocationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */; };
-		5EC8A34D2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift */; };
+		5EC8A34D2628625800012BBE /* CoffeeLocationNetworkManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerDelegate.swift */; };
 		5EC8A3532628626100012BBE /* MapViewPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */; };
 		5EC8A3542628626100012BBE /* MapViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3522628626100012BBE /* MapViewPresenter.swift */; };
 		5EC8A3AB2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC8A3AA2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift */; };
@@ -46,10 +59,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceConverter.swift; sourceTree = "<group>"; };
+		5E205709262F100B0010DBFB /* CCAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCAlertViewController.swift; sourceTree = "<group>"; };
+		5E20570D262F10590010DBFB /* CCModalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCModalButton.swift; sourceTree = "<group>"; };
+		5E205711262F10C20010DBFB /* CCBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCBodyLabel.swift; sourceTree = "<group>"; };
+		5E205718262F10E20010DBFB /* CCTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTitleLabel.swift; sourceTree = "<group>"; };
+		5E20571C262F11370010DBFB /* CCContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCContainerView.swift; sourceTree = "<group>"; };
+		5E205723262F121F0010DBFB /* CCMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMenuButton.swift; sourceTree = "<group>"; };
+		5E20572A262F138A0010DBFB /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
+		5E20572E262F17500010DBFB /* MenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDelegate.swift; sourceTree = "<group>"; };
+		5E205737262F1C0A0010DBFB /* CCMenuButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMenuButtonTests.swift; sourceTree = "<group>"; };
 		5E525C482629E8AC000601B4 /* CCRecentreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCRecentreButton.swift; sourceTree = "<group>"; };
 		5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapViewDelegate.swift; sourceTree = "<group>"; };
 		5E560CFC262DA6990045A7F5 /* FourSquareCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FourSquareCredentials.plist; path = CoffeeCravin/Utilities/FourSquareCredentials.plist; sourceTree = SOURCE_ROOT; };
+		5E560D0B262ECF6D0045A7F5 /* CCLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CCLocationManager.swift; path = CoffeeCravin/Managers/CCLocationManager.swift; sourceTree = SOURCE_ROOT; };
+		5E593033262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoffeeLocationNetworkManager.swift; sourceTree = "<group>"; };
+		5E593039262F27E6007EDF65 /* MockNetworkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkDelegate.swift; sourceTree = "<group>"; };
+		5E59303D262F2803007EDF65 /* MockMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMenuDelegate.swift; sourceTree = "<group>"; };
 		5E5B932B2624640B00DA8943 /* CoffeeCravin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCravin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5B932E2624640B00DA8943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5B93302624640B00DA8943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,14 +88,15 @@
 		5E5B938E2624B47F00DA8943 /* FourSquareAPIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIModel.swift; sourceTree = "<group>"; };
 		5E5B93932624B7C800DA8943 /* CCErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCErrors.swift; sourceTree = "<group>"; };
 		5E5FC9F826273E3000D71849 /* CCMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapView.swift; sourceTree = "<group>"; };
-		5E5FCA002627481500D71849 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		5E5FCA002627481500D71849 /* CCImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCImages.swift; sourceTree = "<group>"; };
 		5E5FCA0626274C9F00D71849 /* CCMapAnnotationCoffeeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCMapAnnotationCoffeeView.swift; sourceTree = "<group>"; };
 		5E5FCA32262768C400D71849 /* Double+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Ext.swift"; sourceTree = "<group>"; };
-		5E8D28902624C9A50047598A /* privateFourSquareCredentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = privateFourSquareCredentials.plist; path = CoffeeCravin/Utilities/privateFourSquareCredentials.plist; sourceTree = SOURCE_ROOT; };
+		5E6D8334262F21FE007A49E0 /* MockMapViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMapViewPresenter.swift; sourceTree = "<group>"; };
+		5E6D8338262F22C9007A49E0 /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 		5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareAPIStub.swift; sourceTree = "<group>"; };
 		5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManager.swift; sourceTree = "<group>"; };
-		5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManagerProtocol.swift; sourceTree = "<group>"; };
+		5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoffeeLocationNetworkManagerDelegate.swift; sourceTree = "<group>"; };
 		5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenterProtocol.swift; sourceTree = "<group>"; };
 		5EC8A3522628626100012BBE /* MapViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewPresenter.swift; sourceTree = "<group>"; };
 		5EC8A39E262881D100012BBE /* CoffeeCravinTestIng.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeCravinTestIng.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,12 +122,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E205715262F10C80010DBFB /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				5E205711262F10C20010DBFB /* CCBodyLabel.swift */,
+				5E205718262F10E20010DBFB /* CCTitleLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		5E205720262F113C0010DBFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E20571C262F11370010DBFB /* CCContainerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5E205732262F1BBE0010DBFB /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */,
+				5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */,
+				5E6D8334262F21FE007A49E0 /* MockMapViewPresenter.swift */,
+				5E593033262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift */,
+				5E593039262F27E6007EDF65 /* MockNetworkDelegate.swift */,
+				5E59303D262F2803007EDF65 /* MockMenuDelegate.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		5E20573B262F1C120010DBFB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5E205737262F1C0A0010DBFB /* CCMenuButtonTests.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		5E525C182628CA6A000601B4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift */,
+				5EC8A34C2628625800012BBE /* CoffeeLocationNetworkManagerDelegate.swift */,
 				5EC8A3512628626100012BBE /* MapViewPresenterProtocol.swift */,
 				5E525C4E2629FAAD000601B4 /* CCMapViewDelegate.swift */,
+				5E20572E262F17500010DBFB /* MenuDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -147,15 +212,15 @@
 		5E5B932D2624640B00DA8943 /* CoffeeCravin */ = {
 			isa = PBXGroup;
 			children = (
+				5E5B936D262466F300DA8943 /* Managers */,
 				5E525C182628CA6A000601B4 /* Protocols */,
 				5E525C192628CA76000601B4 /* Presenters */,
-				5E5FCA31262768AB00D71849 /* Extensions */,
 				5E5B93642624650500DA8943 /* View */,
-				5E5B936D262466F300DA8943 /* Managers */,
 				5E5B938426248A7100DA8943 /* Models */,
 				5E5B936E2624671900DA8943 /* UI */,
 				5E8D288F2624C9550047598A /* Utilities */,
 				5E560CFB262DA5400045A7F5 /* Support */,
+				5E5FCA31262768AB00D71849 /* Extensions */,
 			);
 			path = CoffeeCravin;
 			sourceTree = "<group>";
@@ -165,6 +230,7 @@
 			children = (
 				5E5B9368262465EB00DA8943 /* MapViewController.swift */,
 				5E5B93342624640B00DA8943 /* Main.storyboard */,
+				5E205709262F100B0010DBFB /* CCAlertViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				5EC8A341262860EA00012BBE /* CoffeeLocationNetworkManager.swift */,
+				5E560D0B262ECF6D0045A7F5 /* CCLocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -182,6 +249,8 @@
 			children = (
 				5E5FC9F726273E0C00D71849 /* MapView */,
 				5E5B93772624677000DA8943 /* Buttons */,
+				5E205715262F10C80010DBFB /* Labels */,
+				5E205720262F113C0010DBFB /* Views */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -191,6 +260,8 @@
 			children = (
 				5E5B936F2624676B00DA8943 /* CCGetCoffeeButton.swift */,
 				5E525C482629E8AC000601B4 /* CCRecentreButton.swift */,
+				5E20570D262F10590010DBFB /* CCModalButton.swift */,
+				5E205723262F121F0010DBFB /* CCMenuButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -217,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				5E5FCA32262768C400D71849 /* Double+Ext.swift */,
+				5E20572A262F138A0010DBFB /* ViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -224,10 +296,8 @@
 		5E8D288F2624C9550047598A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5E8D28902624C9A50047598A /* privateFourSquareCredentials.plist */,
 				5E560CFC262DA6990045A7F5 /* FourSquareCredentials.plist */,
-				5E5FCA002627481500D71849 /* Images.swift */,
-				5E525C3A2628CB3D000601B4 /* DistanceConverter.swift */,
+				5E5FCA002627481500D71849 /* CCImages.swift */,
 				5E5B93932624B7C800DA8943 /* CCErrors.swift */,
 			);
 			path = Utilities;
@@ -237,9 +307,10 @@
 			isa = PBXGroup;
 			children = (
 				5EC8A3A2262881D100012BBE /* Info.plist */,
+				5E20573B262F1C120010DBFB /* Buttons */,
 				5EC8A3AA2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift */,
-				5EB3C15126289BAF001B5C6B /* MockURLProtocol.swift */,
-				5EB3C15A26289FFE001B5C6B /* FourSquareAPIStub.swift */,
+				5E6D8338262F22C9007A49E0 /* MapViewControllerTests.swift */,
+				5E205732262F1BBE0010DBFB /* Mocks */,
 			);
 			path = CoffeeCravinTestIng;
 			sourceTree = "<group>";
@@ -328,7 +399,6 @@
 				5E5B93382624640E00DA8943 /* Assets.xcassets in Resources */,
 				5E5B93362624640B00DA8943 /* Main.storyboard in Resources */,
 				5E560CFD262DA69A0045A7F5 /* FourSquareCredentials.plist in Resources */,
-				5E8D28912624C9A50047598A /* privateFourSquareCredentials.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,23 +417,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E5B93702624676B00DA8943 /* CCGetCoffeeButton.swift in Sources */,
+				5E20572F262F17500010DBFB /* MenuDelegate.swift in Sources */,
 				5E525C492629E8AC000601B4 /* CCRecentreButton.swift in Sources */,
 				5E5B938626248A8F00DA8943 /* CoffeeShopsModel.swift in Sources */,
 				5EC8A3542628626100012BBE /* MapViewPresenter.swift in Sources */,
-				5EC8A34D2628625800012BBE /* CoffeeLocationNetworkManagerProtocol.swift in Sources */,
+				5E205724262F121F0010DBFB /* CCMenuButton.swift in Sources */,
+				5EC8A34D2628625800012BBE /* CoffeeLocationNetworkManagerDelegate.swift in Sources */,
 				5E5FCA33262768C400D71849 /* Double+Ext.swift in Sources */,
-				5E525C3B2628CB3D000601B4 /* DistanceConverter.swift in Sources */,
 				5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */,
 				5E5FCA0726274C9F00D71849 /* CCMapAnnotationCoffeeView.swift in Sources */,
 				5E5FC9F926273E3000D71849 /* CCMapView.swift in Sources */,
+				5E20570E262F10590010DBFB /* CCModalButton.swift in Sources */,
 				5E5B93942624B7C800DA8943 /* CCErrors.swift in Sources */,
 				5E5B938F2624B47F00DA8943 /* FourSquareAPIModel.swift in Sources */,
-				5E5FCA012627481500D71849 /* Images.swift in Sources */,
+				5E5FCA012627481500D71849 /* CCImages.swift in Sources */,
+				5E20572B262F138A0010DBFB /* ViewController+Ext.swift in Sources */,
 				5E5B9369262465EB00DA8943 /* MapViewController.swift in Sources */,
 				5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */,
+				5E20570A262F100B0010DBFB /* CCAlertViewController.swift in Sources */,
 				5EC8A342262860EA00012BBE /* CoffeeLocationNetworkManager.swift in Sources */,
+				5E205712262F10C20010DBFB /* CCBodyLabel.swift in Sources */,
 				5E525C4F2629FAAD000601B4 /* CCMapViewDelegate.swift in Sources */,
+				5E205719262F10E20010DBFB /* CCTitleLabel.swift in Sources */,
+				5E560D0C262ECF6D0045A7F5 /* CCLocationManager.swift in Sources */,
 				5EC8A3532628626100012BBE /* MapViewPresenterProtocol.swift in Sources */,
+				5E20571D262F11370010DBFB /* CCContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,7 +449,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E205738262F1C0A0010DBFB /* CCMenuButtonTests.swift in Sources */,
 				5EC8A3AB2628878300012BBE /* CoffeeLocationNetworkManagerTests.swift in Sources */,
+				5E59303E262F2803007EDF65 /* MockMenuDelegate.swift in Sources */,
+				5E6D8335262F21FE007A49E0 /* MockMapViewPresenter.swift in Sources */,
+				5E59303A262F27E6007EDF65 /* MockNetworkDelegate.swift in Sources */,
+				5E6D8339262F22C9007A49E0 /* MapViewControllerTests.swift in Sources */,
+				5E593034262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift in Sources */,
 				5EB3C15226289BAF001B5C6B /* MockURLProtocol.swift in Sources */,
 				5EB3C15B26289FFE001B5C6B /* FourSquareAPIStub.swift in Sources */,
 			);

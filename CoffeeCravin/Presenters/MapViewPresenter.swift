@@ -10,8 +10,10 @@ import Foundation
 class MapViewPresenter: MapViewPresenterProtocol {
     private var coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol!
     private weak var networkDelegate: CoffeeLocationNetworkManagerDelegate?
+    private var menuDelegate: MenuDelegate!
 
-    required init(coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol, networkDelegate: CoffeeLocationNetworkManagerDelegate) {
+    required init(coffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol, networkDelegate: CoffeeLocationNetworkManagerDelegate, menuDelegate: MenuDelegate) {
+        self.menuDelegate = menuDelegate
         self.coffeeLocationNetworkManager = coffeeLocationNetworkManager
         self.networkDelegate = networkDelegate
     }

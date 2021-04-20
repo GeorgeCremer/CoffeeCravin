@@ -1,13 +1,13 @@
 //
-//  CCRecentreButton.swift
+//  CCContainerView.swift
 //  CoffeeCravin
 //
-//  Created by George Cremer on 16/04/2021.
+//  Created by George Cremer on 20/04/2021.
 //
 
 import UIKit
 
-class CCRecenterButton: UIButton {
+class CCContainerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -19,8 +19,10 @@ class CCRecenterButton: UIButton {
     }
 
     private func configure() {
-        setImage(CCImages.recenterEnabled, for: .normal)
-        imageView?.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
+        backgroundColor = .systemBackground
+        layer.cornerRadius = 16
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.white.cgColor
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

@@ -12,37 +12,21 @@ import UIKit
 class MapViewController: UIViewController {
     @IBOutlet var mapView: CCMapView!
     var coffeeSearchButton: CCGetCoffeeButton!
+    var menuButton: CCMenuButton!
     var reCenterButton: CCRecenterButton!
-
-    var locationManager: CLLocationManager!
-    var currentLocation: CLLocationCoordinate2D?
-
     var mapViewPresenter: MapViewPresenterProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if mapViewPresenter == nil {
-            mapViewPresenter = MapViewPresenter(coffeeLocationNetworkManager: CoffeeLocationNetworkManager(), networkDelegate: self)
-        }
-
+        configPresenter()
         configMapView()
-        configLocationManager()
         configButtons()
-
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
     }
 
-    @objc func appMovedToBackground() {
-        print("App moved to background!")
-    }
-
-    func configLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        locationManager.requestLocation()
-        locationManager.requestWhenInUseAuthorization()
+    func configPresenter() {
+        if mapViewPresenter == nil {
+            mapViewPresenter = MapViewPresenter(coffeeLocationNetworkManager: CoffeeLocationNetworkManager(), networkDelegate: self, menuDelegate: self)
+        }
     }
 
     func configMapView() {
@@ -55,6 +39,9 @@ class MapViewController: UIViewController {
         let size: CGFloat = 60
         let padding: CGFloat = 20
 
+        menuButton = CCMenuButton(cornerRadius: size / 2)
+        view.addSubview(menuButton)
+
         coffeeSearchButton = CCGetCoffeeButton(cornerRadius: size / 2)
         view.addSubview(coffeeSearchButton)
 
@@ -62,6 +49,11 @@ class MapViewController: UIViewController {
         view.addSubview(reCenterButton)
 
         NSLayoutConstraint.activate([
+            menuButton.heightAnchor.constraint(equalToConstant: size),
+            menuButton.widthAnchor.constraint(equalToConstant: size),
+            menuButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            menuButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+
             coffeeSearchButton.heightAnchor.constraint(equalToConstant: size),
             coffeeSearchButton.widthAnchor.constraint(equalToConstant: size),
             coffeeSearchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
@@ -73,15 +65,17 @@ class MapViewController: UIViewController {
             reCenterButton.bottomAnchor.constraint(equalTo: coffeeSearchButton.topAnchor, constant: -padding),
         ])
 
+        menuButton.addTarget(self, action: #selector(menuButtonTapped), for: .touchUpInside)
         coffeeSearchButton.addTarget(self, action: #selector(coffeeSearchButtonTapped), for: .touchUpInside)
         reCenterButton.addTarget(self, action: #selector(reCenterButtonTapped), for: .touchUpInside)
     }
 
+    @objc func menuButtonTapped() {
+        presentAlertOnMainThread(title: "Menu", message: "What shall we do? 🤔", buttonTitle: "Random error generator", menuDelegate: self)
+    }
+
     @objc func reCenterButtonTapped() {
-        reCenterButton.isEnabled.toggle()
-        if !reCenterButton.isEnabled {
-            mapView.setUserTrackingMode(.follow, animated: true)
-        }
+        mapView.setUserTrackingMode(.follow, animated: true)
     }
 
     @objc func coffeeSearchButtonTapped() {
@@ -90,22 +84,13 @@ class MapViewController: UIViewController {
     }
 }
 
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        currentLocation = locations[0].coordinate
-    }
-
-    func locationManager(_: CLLocationManager, didFailWithError _: Error) {}
-}
-
 extension MapViewController: CoffeeLocationNetworkManagerDelegate {
     func successfullyRetrievedCoffeeShops(coffeeShops: [CoffeeShopsModel]) {
-        print("successfullyRetrievedCoffeeShops MapViewDelegate: \(coffeeShops)")
         mapView.addCoffeeLocations(coffeeShops: coffeeShops)
     }
 
     func errorHandler(error: CCErrors) {
-        print("errorHandler MapViewDelegate: \(error.rawValue)")
+        presentAlertOnMainThread(title: "Whoops 🤯", message: error.rawValue, buttonTitle: "OK", menuDelegate: nil)
     }
 }
 
@@ -114,31 +99,12 @@ extension MapViewController: MKMapViewDelegate {
         if annotation.isKind(of: MKUserLocation.self) {
             return nil
         }
-
         let identifier = "coffeePin"
-
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? CCMapAnnotationCoffeeView
-
         if annotationView == nil {
             annotationView = CCMapAnnotationCoffeeView(annotation: annotation, reuseIdentifier: identifier)
         }
-
-        // TODO: Refactor
-        annotationView!.canShowCallout = true
-        annotationView!.calloutOffset = CGPoint(x: -5, y: 5)
-
-        let navButton = UIButton(type: .detailDisclosure)
-        navButton.tintColor = .systemPink
-        navButton.setImage(UIImage(systemName: "car.fill"), for: .normal)
-        annotationView!.rightCalloutAccessoryView = navButton
-
-        let subtitleLabel = UILabel()
-        let subtitle = annotation.subtitle as? String
-        subtitleLabel.font = UIFont.systemFont(ofSize: 15, weight: .light)
-        subtitleLabel.text = subtitle
-        subtitleLabel.numberOfLines = 0
-        annotationView!.detailCalloutAccessoryView = subtitleLabel
-
+        annotationView?.setSubtitle(text: annotation.subtitle as? String)
         return annotationView
     }
 
@@ -146,5 +112,12 @@ extension MapViewController: MKMapViewDelegate {
         guard let coordinate = view.annotation?.coordinate else { return }
         let appleURL = "http://maps.apple.com/?daddr=\(coordinate.latitude),\(coordinate.longitude)"
         UIApplication.shared.open(URL(string: appleURL)!, options: [:], completionHandler: nil)
+    }
+}
+
+extension MapViewController: MenuDelegate {
+    func generateRandomError() {
+        let error = CCErrors.allCases.randomElement()!
+        presentAlertOnMainThread(title: "Whoops 🤯", message: error.rawValue, buttonTitle: "OK", menuDelegate: nil)
     }
 }

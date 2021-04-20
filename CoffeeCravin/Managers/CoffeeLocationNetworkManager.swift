@@ -87,14 +87,15 @@ class CoffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol {
     private func constructCoffeeSearchURL(clientID: String, clientSecret: String, latitude: Double, longitude: Double) -> URL? {
         let baseURL = "https://api.foursquare.com/v2/"
         let searchType = "venues/explore"
+
         /// clientID ID + clientSecret
+
         let coordinates = "&ll=\(latitude),\(longitude)"
         let query = "&%20query=coffee%20%20"
         let filterForCafeCoffeeCategories = "&\(cafeCoffeeCategories())"
         let versionDate = "&v=20210401"
 
         let endpoint = baseURL + searchType + clientID + clientSecret + coordinates + query + filterForCafeCoffeeCategories + versionDate
-        print(endpoint)
         return URL(string: endpoint)
     }
 
@@ -111,43 +112,28 @@ class CoffeeLocationNetworkManager: CoffeeLocationNetworkManagerProtocol {
         let emptyText = "Street address not found\nSee map location."
         guard let address = addressFormatted else { return emptyText }
         let filtered = address.compactMap { $0 }
-
         return filtered.isEmpty ? emptyText : filtered.joined(separator: "\n")
     }
 
     private func retrieveFourSquareAPIKeys(for api: FourSquareAPIKeys) -> String? {
-        // TODO: Refactor this
-
         let key: String = api.rawValue
-        var value: String!
+        var path: String!
         switch api {
         case .clientID:
-            value = "?client_id="
+            path = "?client_id="
         case .clientSecret:
-            value = "&client_secret="
+            path = "&client_secret="
         }
-        // TODO: Refactor this, added quickly at the end.
 
         if let infoPlistPath = Bundle.main.path(forResource: "FourSquareCredentials", ofType: "plist"),
            let dict = NSDictionary(contentsOfFile: infoPlistPath) as? [String: String]
         {
             if let result = dict[key] {
                 if !result.isEmpty {
-                    print("using yourFourSquareCredentials")
-                    return value.appending(result)
+                    return path.appending(result)
                 }
             }
         }
-
-        if let infoPlistPath = Bundle.main.path(forResource: "privateFourSquareCredentials", ofType: "plist"),
-           let dict = NSDictionary(contentsOfFile: infoPlistPath) as? [String: String]
-        {
-            if let result = dict[key] {
-                print("using privateFourSquareCredentials")
-                return value.appending(result)
-            }
-        }
-
         return nil
     }
 }

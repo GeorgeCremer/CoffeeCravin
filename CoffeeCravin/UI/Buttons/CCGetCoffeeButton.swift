@@ -24,7 +24,7 @@ class CCGetCoffeeButton: UIButton {
     }
 
     private func configure() {
-        setImage(Images.coffeeButtonIcon, for: .normal)
+        setImage(CCImages.coffeeButtonIcon, for: .normal)
         layer.backgroundColor = UIColor.systemPink.cgColor
         clipsToBounds = true
         translatesAutoresizingMaskIntoConstraints = false

@@ -11,7 +11,7 @@
         <!--Map View Controller-->
         <scene sceneID="QEZ-v9-d9M">
             <objects>
-                <viewController id="0z7-El-RXH" customClass="MapViewController" customModule="CoffeeCravin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0z7-El-RXH" customClass="MapViewController" customModule="CoffeeCravin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jKy-6c-Cv6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

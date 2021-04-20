@@ -35,7 +35,7 @@ class CoffeeLocationNetworkManagerTests: XCTestCase {
         sut.getNearbyCoffeeLocations(latitude: 51.509865, longitude: -0.118092) { result in
             switch result {
             case let .success(shops):
-                XCTAssertTrue(shops.count >= 1, "Expecting one or more CoffeeShop locations for successful getNearbyCoffeeLocations() call.")
+                XCTAssertTrue(shops.count == 4, "Expecting 4 CoffeeShop locations for successful getNearbyCoffeeLocations() - instead got \(shops.count).")
 
             case let .failure(error):
                 XCTFail("getNearbyCoffeeLocations() expected a successful result, not error: \(error)")
@@ -90,12 +90,5 @@ class CoffeeLocationNetworkManagerTests: XCTestCase {
             myExpectation.fulfill()
         }
         wait(for: [myExpectation], timeout: 5)
-    }
-
-    func testCoffeeLocationNetworkManager_WhenURLError_ReturnError() {
-//        let url = sut.constructCoffeeSearchURL(clientID: "123", clientSecret: "456")
-//        let expectedURL = URL(string: "https://api.foursquare.com/v2/venues/search123456&ll=55.31126657574209,-3.3958619999999664&query=coffee&categoryId=4bf58dd8d48988d1e0931735&v=20210401")
-//        XCTAssertEqual(url, expectedURL, "URL output was not as expected")
-//
     }
 }
