@@ -22,4 +22,4 @@ Sketched out a simple design and thought about usable elements 
 - The callout could be improved visually, by replacing the rightCalloutAccessoryView button for example.
 
 
-![](CoffeeCravin/Support/Assets.xcassets/ScreenShot.png)
+![](CoffeeCravin/Support/ScreenShot.png)

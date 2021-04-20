@@ -23,6 +23,7 @@
 		5E593034262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593033262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift */; };
 		5E59303A262F27E6007EDF65 /* MockNetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593039262F27E6007EDF65 /* MockNetworkDelegate.swift */; };
 		5E59303E262F2803007EDF65 /* MockMenuDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E59303D262F2803007EDF65 /* MockMenuDelegate.swift */; };
+		5E593048262F3954007EDF65 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E593047262F3954007EDF65 /* ScreenShot.png */; };
 		5E5B932F2624640B00DA8943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B932E2624640B00DA8943 /* AppDelegate.swift */; };
 		5E5B93312624640B00DA8943 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5B93302624640B00DA8943 /* SceneDelegate.swift */; };
 		5E5B93362624640B00DA8943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5B93342624640B00DA8943 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		5E593033262F27BB007EDF65 /* MockCoffeeLocationNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoffeeLocationNetworkManager.swift; sourceTree = "<group>"; };
 		5E593039262F27E6007EDF65 /* MockNetworkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkDelegate.swift; sourceTree = "<group>"; };
 		5E59303D262F2803007EDF65 /* MockMenuDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMenuDelegate.swift; sourceTree = "<group>"; };
+		5E593047262F3954007EDF65 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScreenShot.png; path = CoffeeCravin/Support/ScreenShot.png; sourceTree = SOURCE_ROOT; };
 		5E5B932B2624640B00DA8943 /* CoffeeCravin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCravin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5B932E2624640B00DA8943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E5B93302624640B00DA8943 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				5E5B93372624640E00DA8943 /* Assets.xcassets */,
 				5E5B93392624640E00DA8943 /* LaunchScreen.storyboard */,
 				5E5B933C2624640E00DA8943 /* Info.plist */,
+				5E593047262F3954007EDF65 /* ScreenShot.png */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			files = (
 				5E5B933B2624640E00DA8943 /* LaunchScreen.storyboard in Resources */,
 				5E5B93382624640E00DA8943 /* Assets.xcassets in Resources */,
+				5E593048262F3954007EDF65 /* ScreenShot.png in Resources */,
 				5E5B93362624640B00DA8943 /* Main.storyboard in Resources */,
 				5E560CFD262DA69A0045A7F5 /* FourSquareCredentials.plist in Resources */,
 			);
